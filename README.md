@@ -1,7 +1,7 @@
 # fltk-fluid-syntax-highlighting README
 
 
-> I included my own text using these tips boxes, because why not.
+> I included my own text using these tips boxes, because why not. This is a useless extension tbh but i'm proud
 
 > I know, bad styling, rip
 
@@ -12,6 +12,11 @@
 > Want to see what it does without actually using .fl files, check out the exampleFile
 
 > This VScode Extension is published on the Marketplace, but if you want to install from the repo, install the `.vsix`
+
+Some Resoruces I used:
+- https://www.apeth.com/nonblog/stories/textmatebundle.html
+- https://macromates.com/manual/en/language_grammars
+- https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide
 
 ## Features
 
