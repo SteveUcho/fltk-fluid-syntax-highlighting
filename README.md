@@ -1,14 +1,17 @@
 # fltk-fluid-syntax-highlighting README
 
-This is the README for your extension "fltk-fluid-syntax-highlighting". After writing up a brief description, we recommend including the following sections.
 
 > I included my own text using these tips boxes, because why not.
 
 > I know, bad styling, rip
 
-> I mostly wrote this to learn regular expressions, and learn I did... Quarantine has blessed(cursed) me with a lot of time
+> I mostly wrote this to learn regular expressions, and learn I did... Quarantine has blessed(cursed) me(us) with a lot of time
 
 > If anyone actually manages to find this and use it, and wants me to make it better, I will, otherwise... prob not
+
+> Want to see what it does without actually using .fl files, check out the exampleFile
+
+> This VScode Extension is published on the Marketplace, but if you want to install from the repo, install the `.vsix`
 
 ## Features
 

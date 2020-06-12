@@ -2,6 +2,7 @@
     "name": "fltk-fluid-syntax-highlighting",
     "displayName": "FLTK FLUID Syntax Highlighting",
     "description": "Syntax highlighter for the \"FLTK User Interface Designer (FLUID)\" .fl file format",
+    "publisher": "SteveUcho",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.9.0"
@@ -21,5 +22,9 @@
             "scopeName": "source.fluid",
             "path": "./syntaxes/fluid.tmLanguage.json"
         }]
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/SteveUcho/fltk-fluid-syntax-highlighting"
     }
 }
