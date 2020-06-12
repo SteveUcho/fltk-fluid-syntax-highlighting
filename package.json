@@ -1,0 +1,25 @@
+{
+    "name": "fltk-fluid-syntax-highlighting",
+    "displayName": "FLTK FLUID Syntax Highlighting",
+    "description": "Syntax highlighter for the \"FLTK User Interface Designer (FLUID)\" .fl file format",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.9.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "fluid",
+            "aliases": ["FLTK_FLUID", "fluid"],
+            "extensions": [".fl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "fluid",
+            "scopeName": "source.fluid",
+            "path": "./syntaxes/fluid.tmLanguage.json"
+        }]
+    }
+}

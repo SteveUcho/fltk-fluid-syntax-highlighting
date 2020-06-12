@@ -1,0 +1,175 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "FLTK_FLUID",
+	"patterns": [
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#attributes"
+		},
+		{
+			"include": "#number"
+		},
+		{
+			"include": "#Fl_objects"
+		},
+		{
+			"include": "#entities"
+		},
+		{
+			"include": "#declarations"
+		}
+	],
+	"repository": {
+		"attributes": {
+			"begin": "^\\s*(xywh|label|user_data)\\b",
+			"end": "$",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.control.fluid"
+				},
+				"2": {
+					"name": "variable.parameter.fluid"
+				}
+			},
+			"patterns": [
+				{
+					"name": "variable.language.fluid",
+					"match": "\\b[a-z][A-Za-z_]+\\b"
+				},
+				{
+					"include": "#number"
+				},
+				{
+					"name": "constant.language.fluid",
+					"match": "\\b[A-Z_]+\\b"
+				},
+				{
+					"include": "#comment"
+				},
+				{
+					"include": "#symbols"
+				},
+				{
+					"name": "storage.type.fluid",
+					"match": "\\b([A-Z][a-z]+)\\b"
+				},
+				{
+					"include": "#strings"
+				}
+			]
+		},
+		"entities": {
+			"patterns": [
+				{
+					"begin": "\\b(class|)\\b\\s([A-Za-z_]+)\\b\\s?(?={)",
+					"end": "$",
+					"beginCaptures": {
+						"0": {
+							"name": "storage.type.fluid"
+						},
+						"2": {
+							"name": "entity.name.type.fluid"
+						}
+					}
+				},
+				{
+					"begin": "\\b(Function|)\\b\\s",
+					"end": "$",
+					"beginCaptures": {
+						"0": {
+							"name": "storage.type.fluid"
+						}
+					},
+					"patterns": [
+						{
+							"name": "entity.name.function.fluid",
+							"match": "\\b[A-Za-z_]+\\s?(?=\\()"
+						},
+						{
+							"include": "#comment"
+						}
+					]
+				},
+				{
+					"include": "#comment"
+				},
+				{
+					"include": "#number"
+				}
+			]
+		},
+		"Fl_objects": {
+			"begin": "(Fl_[A-Za-z_]+)\\s([A-Za-z]+)?", 
+			"end": "$",
+			"captures": {
+				"1": {
+						"name": "support.type.fluid"
+				},
+				"2": {
+						"name": "entity.name.type.fluid"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#number"
+				},
+				{
+					"include": "#comment"
+				}
+			]
+		},
+		"declarations": {
+			"begin": "^\\s*(header_name|version|code_name)\\b",
+			"end": "$",
+			"captures": {
+				"1": {
+					"name": "keyword.other.fluid"
+				}
+			},
+			"patterns": [
+				{
+					"name": "entity.name.tag.fluid",
+					"match": "\\.[a-z]+"
+				},
+				{
+					"include": "#number"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.fluid",
+					"begin": "#",
+					"end": "$"
+				}
+			]
+		},
+		"number": {
+			"name": "constant.numeric.fluid",
+			"match": "[0-9.]+"
+		},
+		"strings": {
+			"name": "string.quoted.double.fluid",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.fluid",
+					"match": "\\\\."
+				}
+			]
+		},
+		"symbols": {
+			"name": "keyword.operator.fluid",
+			"match": "[<>]"
+		},
+		"types": {
+			"name": "storage.type.fluid",
+			"match": "\\b(Float|)\\b"
+		}
+	},
+	"scopeName": "source.fluid"
+}
